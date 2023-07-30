@@ -1,0 +1,497 @@
+/* starting mobile design first to load faster on mobile devices */
+
+:root {
+    --VeryDarkBlue: hsl(243, 87%, 12%);
+    --DesaturatedBlue: hsl(238, 22%, 44%);
+    --BrightBlue: hsl(224, 93%, 58%);
+    --ModerateCyan: hsl(170, 45%, 43%);
+    --LightGrayishBlue: hsl(240, 75%, 98%);
+    --LightGray: hsl(0, 0%, 75%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    width: 100%;
+}
+
+h1 {
+    font-size: 1.25rem;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 0.875rem;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+header img {
+    width: 100px;
+    height: 30px;
+}
+
+.illustration {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+header ul {
+    display: flex;
+    margin-left: auto;
+}
+
+header li {
+    margin-right: 20px;
+    font-size: 0.875rem;
+}
+
+section:nth-child(2) {
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+section:nth-child(2) span {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+section:nth-child(2) input {
+    position: absolute;
+    top: 12%;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+section:nth-child(2) :placeholder-shown {
+    opacity: 0.5;
+}
+
+#check-one, #check-two {
+    display: none;
+}
+
+section:nth-child(2) button {
+    position: absolute;
+    bottom: 40%;
+    width: 100%;
+}
+
+button {
+    height: 40px;
+    border: none;
+    background-color: var(--BrightBlue);
+    color: white;
+    font-size: 0.938rem;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:focus {
+    opacity: 75%;
+}
+
+#check-one {
+    position: absolute;
+    top: 32%;
+}
+
+#btn-one:focus {
+    bottom: 35%;
+}
+
+#btn-one:focus ~ #check-one {
+    display: block;
+    color: red;
+}
+
+#btn-one:focus ~ #email {
+    border-color: red;
+}
+
+section:nth-child(3) {
+    padding: 100px 20px;
+    background: url(./images/bg-curve-mobile.svg) no-repeat;
+    background-position: top right 50%;
+    background-size: 450% 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+section:nth-child(3) h2 {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+section:nth-child(3) div:nth-child(2) p:nth-child(2), p:nth-child(3) {
+    color: var(--DesaturatedBlue);
+    margin-bottom: 20px;
+}
+
+section:nth-child(3) div:nth-child(2) span:nth-child(4) {
+    align-self: center;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    margin-left: 80px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--ModerateCyan);
+    border-bottom: solid 2px;
+}
+
+section:nth-child(3) div:nth-child(2) span:nth-child(4):hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+section:nth-child(3) div:nth-child(2) span:nth-child(4) img {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+article {
+    box-shadow: 0 5px 15px lightgrey;
+    padding: 30px 20px 30px 30px;
+    border-radius: 5px;
+}
+
+article p {
+    margin: 15px 0;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+article span {
+    display: flex;
+    align-items: center;
+}
+
+article span span {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 15px;
+}
+
+h3 {
+    font-size: 0.875rem;
+}
+
+h4 {
+    font-size: 0.688rem;
+    font-weight: 400;
+    margin-top: 3px;
+    color: hsl(0, 2%, 32%);
+}
+
+article span img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+section:nth-child(4) {
+    text-align: center;
+    padding: 50px 0;
+    background-color: var(--DesaturatedBlue);
+    color: white;
+
+}
+
+section:nth-child(4) h2 {
+    font-size: 1.25rem;
+}
+
+section:nth-child(4) p {
+    margin: 20px;
+    font-size: 0.938rem;
+}
+
+section:nth-child(4) span:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 70px;
+    margin: auto;
+    position: relative;
+}
+
+section:nth-child(4) input {
+    position: absolute;
+    top: 12%;
+    width: 100%;
+    height: 35px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border-color: lightgrey;
+}
+
+#btn-two {
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    background-color: var(--BrightBlue);
+    border: none;
+    color: white;
+}
+
+#check-two {
+    position: absolute;
+    top: 32%;
+    left: -20px;
+}
+
+#btn-two:focus {
+    top: 90%;
+}
+
+#btn-two:focus ~ #check-two {
+    display: block;
+    color: lightgrey;
+}
+
+#btn-two:focus ~ #example {
+    border-color: red;
+}
+
+footer {
+    padding: 50px 30px;
+    background-color: var(--VeryDarkBlue);
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: white;
+}
+
+footer p {
+    font-size: 0.813rem;
+}
+
+footer #footer-logo {
+    width: 120px;
+    height: 40px;
+}
+
+footer span span {
+    display: flex;
+}
+
+footer span span img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+footer span span:nth-child(1) {
+    margin: 30px 0 15px;
+}
+
+footer span span:nth-child(2) {
+    margin-bottom: 30px;
+}
+
+footer ul {
+    margin-bottom: 40px;
+}
+
+footer li {
+    margin-bottom: 15px;
+}
+
+footer span:nth-child(5) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer span:nth-child(5) span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: solid 1px;
+    margin: 0;
+    margin-right: 10px;
+}
+
+footer span:nth-child(5) span:hover, li:hover {
+    color: var(--BrightBlue);
+    cursor: pointer;
+}
+
+footer span:nth-child(5) span:nth-child(3) {
+    margin-right: 0;
+}
+
+/* desktop design*/
+
+@media screen and (min-width: 376px) {
+
+    section:nth-child(2) {
+        display: flex;
+        height: 500px;
+        position: relative;
+        padding: 50px;
+        text-align: start;
+    }
+
+    section:nth-child(2) span {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    section:nth-child(2) span input {
+        width: 50%;
+    }
+
+    section:nth-child(2) button {
+        width: 40%;
+        top: 12%;
+        right: 8%;
+    }
+
+    section:nth-child(3) {
+        flex-direction: row;
+        position: relative;
+        padding: 50px;
+    }
+
+    section:nth-child(3) h2 {
+        text-align: start;
+    }
+
+    section:nth-child(3) div:nth-child(2) span:nth-child(4) {
+        margin-left: 0;
+        justify-content: flex-start;
+        width: 160px;
+    }
+
+    article {
+        width: 70%;
+    }
+
+    .illustration {
+        height: 100%;
+    }
+
+    div:nth-child(1) {
+        width: 50%;
+        height: 80%;
+        position: absolute;
+        right: 0;
+    }
+
+    div:nth-child(2) {
+        width: 40%;
+        height: 100%;
+    }
+
+    h1, section:nth-child(3) h2 {
+        font-size: 1.563rem;
+    }
+
+    section:nth-child(4) {
+        display: flex;
+        text-align: start;
+        padding: 60px 40px;
+    }
+
+    section:nth-child(4) p {
+        margin: 10px 0;
+    }
+
+    section:nth-child(4) span:nth-child(1) {
+        width: 80%;
+    }
+
+    section:nth-child(4) span:nth-child(2) {
+        width: 50%;
+        align-items: flex-start;
+        margin-left: 20%;
+    }
+
+    #check-two {
+        top: 55%;
+        left: 0;
+    }
+
+    section:nth-child(4) input {
+        width: 80%;
+        height: 40px;
+        border-radius: 3px;
+    }
+
+    #btn-two {
+        width: 35%;
+        margin-top: 10px;
+        border-radius: 3px;
+    }
+
+    footer {
+        display: flex;
+        position: relative;
+        height: 300px;
+        padding: 70px 50px;
+    }
+
+    #contact {
+        position: absolute;
+        top: 35%;
+    }
+
+    footer span:nth-child(5) {
+        position: absolute;
+        top: 45%;
+        left: 80%;
+    }
+
+    ul:nth-child(3) {
+        position: absolute;
+        top: 45%;
+        left: 35%;
+    }
+
+    ul:nth-child(4) {
+        position: absolute;
+        top: 45%;
+        left: 55%;
+    }
+
+}
